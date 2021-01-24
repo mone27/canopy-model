@@ -9,15 +9,39 @@
 
 # Required packages
 
-# Required functions
-
 # Load parameter file
+pars <- read.csv("parameters.csv")
+
+# Load functions
+
 
 # Load input
+input <- read.csv("FLX_DE-Hai-nogap.csv")
 
-# Load initial state
+# Load initial state (this should be a dataframe with all the state variables and one row with initial values)
+# statevars <- read.csv("initial_values.csv")
+
+# Initial calculations and variables
+
 
 # Model run (for loop)
+for(n in 1:length(time)) {
+
+  # Calculate radiative transfer
+
+
+  # Calculate soil hydrology
+
+
+  # Calculate soil temperature
+
+
+  # Calculate leaf temperature, photosynthesis and stomatal conductance
+
+
+  # Calculate plant C pools, soil decomposition and soil C pools
+
+}
 
 # Write out output
 
