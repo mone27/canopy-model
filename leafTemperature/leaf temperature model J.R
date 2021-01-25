@@ -318,3 +318,14 @@ plot(flux$etflx, ylab = " Leaf transpiration flux (mol H2O/m2 leaf/s)")
 plot(flux$tleaf~atmo$tair, ylab="Leaf temperature changes with air temperature") 
 plot(flux$tleaf~flux$rnet)
 
+#5. The most unprofessional sensitivity analysis you could possibly imagine
+#run while loop first with Initial_Tl, then with Initial_Tl1
+leafemiss <- runif(50000, min=0.7, max=1) #change leaf emissivity
+leafemiss <- 0.96
+dl <- 6 #change leaf dimensions
+dl <- runif(50000, min=3, max=6)
+latheatvap <- 2260 #change #change latent heat of vaporisation
+latheatvap <- runif(50000, min=1500, max=3000)
+#run model twice with different input parameters
+
+plot(flux$tleaf-flux$tleaf1)
